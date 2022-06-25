@@ -1,0 +1,43 @@
+.news {
+
+    a {
+        color: unset;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #009EA1;
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__card {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        box-shadow: 0 10px 15px 0 #F9F9F9;
+
+        &__text {
+
+            display: flex;
+            align-items: center;
+
+            p {
+                padding: 2rem;
+            }
+        }
+
+        img {
+            max-height: 15rem;
+        }
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

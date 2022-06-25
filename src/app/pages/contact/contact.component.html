@@ -1,0 +1,30 @@
+<section class="container contact">
+    <section *ngFor="let item of contactCardItems" class="card">
+        <h2 class="card__headline">{{item.headline}}</h2>
+        <article class="card__details">
+            <p *ngFor="let field of item.fields" class="card__details__field">
+                
+                <span class="card__details__field__name">{{field.name}}:</span>
+                {{field.details}}
+                <ng-container *ngIf="!field.details.length">
+                    <div  *ngFor="let detail of field.subDetails">
+                        <span class="card__details__field__name">{{detail.name}}:</span>
+                        {{detail.details}} <br/>
+                    </div>
+                </ng-container>
+            </p>
+        </article>
+    
+        <ng-container *ngIf="item.children">
+            <section *ngFor="let child of item.children">
+                <h2 class="card__headline--child">{{child.headline}}</h2>
+                <article class="card__details">
+                    <p *ngFor="let field of child.fields" class="card__details__field">
+                        <span class="card__details__field__name">{{field.name}}:</span> {{field.details}}
+                    </p>
+                </article>
+            </section>
+        </ng-container>
+    </section>
+    
+</section>
