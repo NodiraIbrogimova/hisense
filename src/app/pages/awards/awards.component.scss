@@ -23,11 +23,18 @@
         display: flex;
         justify-content: space-between;
         margin-top: 5rem;
+
+        img {
+            max-width: 33%;
+            height: auto;
+            max-height: 100px;
+            object-fit: contain;
+        }
     }
 
     &__apply-section {
         margin-top: 5rem;
-        background: url('../../../assets/images/svg/image-apply-bg.svg');
+        background: url('../../../assets/images/svg/image-apply-bg.webp');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -244,6 +251,7 @@
 
                     &__item {
                         flex-basis: 32%;
+                        max-width: 32%;
                     }
                 }
             }
@@ -260,6 +268,8 @@
             flex-direction: column;
 
             img {
+                width: 100%;
+                max-width: 100%;
                 margin-bottom: 1rem;
             }
         }
@@ -304,8 +314,14 @@
 
                 .cards {
                     &__item {
-                        flex-basis: 48%;
+                        flex-basis: 49%;
+                        max-width: unset;
                     }
+                }
+
+                .organizers img {
+                    max-width: 100%;
+                    padding: 0.5rem 4rem;
                 }
 
             }
