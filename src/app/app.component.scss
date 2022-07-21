@@ -9,5 +9,11 @@
 }
 
 .main-wrapper {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 66px);
+}
+
+.main-content {
+  flex-grow: 1;
 }

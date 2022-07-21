@@ -1,21 +1,21 @@
-<header class="header" (scroll)="stickyTop($event)">
-    <div class="container">
-      <nav class="nav">
-        <div class="mobile-menu" (click)=toggleMenu()>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-  
-        <a class="brand" href="#">
-          <img src="assets/images/svg/logo.svg" alt="logo"/>
-        </a>
-  
-        <ul class="nav-list">
-          <li class="nav-item" *ngFor="let item of navItems" (click)=toggleMenu()>
-            <a class="nav-link" routerLink="/{{item.link}}" routerLinkActive="active">{{item.name}}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="header">
+  <div class="container container--header">
+    <nav class="nav">
+      <div class="mobile-menu" (click)=toggleMobileMenu()>
+        <div class="line" [class]="{open: mobileMenuIsOpen}"></div>
+        <div class="line" [class]="{open: mobileMenuIsOpen}"></div>
+        <div class="line" [class]="{open: mobileMenuIsOpen}"></div>
+      </div>
+
+      <a class="brand" href="#">
+        <img src="assets/images/svg/logo.svg" alt="logo" />
+      </a>
+
+      <ul class="nav-list" (click)=toggleMobileMenu() [class]="{open: mobileMenuIsOpen}">
+        <li class="nav-item" *ngFor="let item of navItems">
+          <a class="nav-link link-dark" routerLink="/{{item.link}}" routerLinkActive="active">{{item.name}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

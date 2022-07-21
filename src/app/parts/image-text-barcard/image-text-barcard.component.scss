@@ -1,0 +1,42 @@
+.card {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        box-shadow: 0 10px 15px 0 #F5F5F5;
+
+        img {
+            flex-grow: 1;
+            max-width: 20rem;
+            height: auto;
+        }
+
+        &__body {
+            flex-grow: 3;
+            padding: 1rem 2.5rem;
+
+            p,
+            h3 {
+                display: block;
+                margin-block-start: 0em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .card {
+        &__item {
+            flex-direction: column;
+            justify-content: center;
+            &__body {
+                padding: 5rem 2rem;
+            }
+        }
+    }
+}

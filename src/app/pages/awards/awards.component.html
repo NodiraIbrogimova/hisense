@@ -1,20 +1,179 @@
 <section class="container awards">
     <div class="awards__logos">
         <img src="../../../assets/images/svg/logo-shaharsoz.svg" alt="logo-shaharsoz" class="shaharsoz">
-        <img src="../../../assets/images/svg/logo-yuksalish.svg" alt="logo-yuksalish" class="yuksalish">
+        <img src="../../../assets/images/organizers/logo-yuksalish.svg" alt="logo-yuksalish" class="yuksalish">
     </div>
 
-
     <div class="awards__apply-section">
-        <!-- <img src="../../../assets/images/svg/image-apply-bg.svg" alt="image-apply"> -->
-
         <div class="awards__apply-section__text">
-            <h2>Осталось один день
-                до участия в Shaharsoz Award 2022</h2>
-            <a href="#"><button><span>Подать Заявку ></span></button></a>
+            <h2>Осталось один день до участия в Shaharsoz Award 2022</h2>
+            <a href="https://bit.ly/3RLVjJg"
+                target="_blank"><button><span>Подать Заявку ></span></button></a>
         </div>
     </div>
 
-    <div class="awards__navigations"></div>
+    <div class="awards__navigations">
+
+        <nav class="awards__navigations__tab nav">
+            <ul class="nav-list">
+                <li class="nav-item" *ngFor="let item of navItems" (click)="activatePage(item.tabLink)"
+                    [class]="{active: activeLink === item.tabLink}">
+                    <a class="nav-link">{{item.name}}</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="awards__navigations__tabcontent">
+            <section [class]="openPage('about-awards')">
+                <h2 class="awards__navigations__tabcontent__headline text-bold">О Премии</h2>
+                <p class="text">
+                    Премия для дипломных работ в сфере градостроительства Hisense Award «Shaharsoz 2022» впервые
+                    проводится по инициативе «Градостроительной волны» при ОНД «Юксалиш».
+                </p>
+                <br>
+                <p class="text">
+                    Цель — повышение качества дипломных работ выпускников архитектурно-строительных факультетов, а также
+                    выявление лучших выпускников в отрасли. Премию планируется вручать ежегодно.
+                </p>
+                <br>
+                <p class="text">
+                    Лауреаты премии будут рекомендованы для трудоустройства в лучших проектных институтах страны.
+                    Отобранные работы будут представлены на выставке архитектурных проектов.
+                </p>
+                <br>
+                <p class="text">
+                    Генеральным спонсором и соорганизатором премии является Hisense – китайская государственная
+                    компания, производитель крупной бытовой техники и электроники.
+                </p>
+                <br>
+                <p class="text emphasized">
+                    Корпорация Hisense основана в 1969 году и входит в десятку крупнейших компаний КНР, связанных с
+                    электроникой. Специализируется на разработке и производстве высокотехнологичной продукции, владеет
+                    сетью гостиниц. Продукция экспортируется более чем в 100 стран мира.
+                </p>
+                <br>
+                <p class="text emphasized">
+                    Компания Hisense является спонсором многих спортивных мероприятий и команд. В 2018 году стала
+                    генеральным спонсором чемпионата мира по футболу.
+                </p>
+                <br>
+                <p class="text">
+                    Инициатором премии является «Градостроительная волна» — объединение молодых архитекторов и
+                    проектировщиков, сформированное в апреле 2021 года при поддержке ОНД «Юксалиш».
+                </p>
+            </section>
+
+            <section [class]="openPage('awards-and-deadlines')">
+                <h2 class="awards__navigations__tabcontent__headline text-bold">Призы и Сроки</h2>
+                <p class="text">
+                    По итогам конкурса будут определены <span class="text-bold">четверо</span> победителей. Каждый из них получит денежный приз в
+                    размере <span class="text-bold">10 000 000</span> (десять миллионов) <span class="text-bold">сумов</span> и подарки от спонсора. Денежный приз будет вручен в
+                    форме наличных на торжественной церемонии награждения.
+                </p>
+                <br>
+                <br>
+                <p class="text">
+                    Крайний срок подачи заявок: <span class="text-bold">23:59, 17 сентября 2022 года.</span>
+                </p>
+                <br>
+                <p class="text">
+                    Объявление победителей: <span class="text-bold">10 октября 2022 года.</span>
+                </p>
+                <br>
+                <p class="text">
+                    Церемония награждения: <span class="text-bold">октябрь—ноябрь.</span>
+                </p>
+                <br>
+                <br>
+                <span class="text">
+                    Вопросы можно присылать по электронной почте: 
+                </span>
+                <a class="text text--email" href="mailto: shaharsozliktolqini@gmail.com">shaharsozliktolqini@gmail.com</a>
+                <br>
+
+                <h2 class="awards__navigations__tabcontent__headline text-bold mt-3">Номинации</h2>
+                <p class="text text-bold">Архитектура</p>
+                <p class="text">
+                    Для данной номинации необходимо предоставить дипломный проект архитектурного решения для общественного здания или малой формы в городах или поселениях Узбекистана.
+                </p>
+                <br>
+                <p class="text text-bold">Градостроительство</p>
+                <p class="text">
+                    Для данной номинации необходимо предоставить дипломный проект пространственно-планировочного решения для общественных пространств или городских территорий в городах Узбекистана.
+                </p>
+                <br>
+                <p class="text text-bold">Конструкция</p>
+                <p class="text">
+                    Для данной номинации необходимо предоставить дипломный проект конструктивного решения здания или сооружения любого предназначения с предоставлением расчетов выполненных в современных программных комплексах.
+                </p>
+                <br>
+                <p class="text text-bold">Инженерия</p>
+                <p class="text">
+                    Для данной номинации необходимо предоставить дипломный проект системы VRF для сооружений любого предназначения на территории Узбекистана.
+                </p>
+                <br>
+            </section>
+
+            <section [class]="openPage('judges-and-criterias')">
+                <h2 class="awards__navigations__tabcontent__headline text-bold">Жюри и Критерии отбора</h2>
+                <ng-container *ngFor = "let judge of judges">
+                    <p class="text text-bold mt-3 mb-1">{{judge.category}}</p>
+                    <p class="text mb-1">Бобир Клычев – Председатель жюри, Основатель бюро “ARC”</p>
+                    <p class="text mb-3">Зафар Ташмухамедов – Главный архитектор“Murad Buildings Studio”</p>
+                    <section class="cards mb-3">
+                        <article *ngFor="let item of judge.cards" class="cards__item">
+                            <div class="cards__item__image">
+                                <img src="{{item.img}}" alt="card-image">
+                            </div>
+                            <div class="cards__item__info">
+                                <h3>{{item.name}}</h3>
+                                <h5>{{item.description}}</h5>
+                            </div>
+                        </article>
+                    </section>
+                    <br>
+                </ng-container>
+                <p class="text mb-2">
+                    Жюри будет оценивать работы по трем основным критериям:
+                </p>
+                <br>
+                <p class="text mb-2">
+                    <span class="text-bold">Красота:</span>это выглядит потрясающе? Мы знаем, что красота субъективна, но наши судьи будут обращать внимание на эстетическую строгость, детализацию и использование материалов.
+                </p>
+                <br>
+                <p class="text mb-2">
+                    <span class="text-bold">Инновационность:</span> включает ли проект оригинальное мышление или решает проблему по-новому? Мы не имеем в виду, что каждая запись должна изобретать велосипед, но мы будем искать доказательства свежих подходов и новых идей.
+                </p>
+                <br>
+                <p class="text mb-2 mb-3"><span class="text-bold">Выгодность:</span> полезно ли это и заботливо ли это как для людей, так и для планеты? Ваш проект не должен быть направлен на спасение мира, но он должен демонстрировать уважение и внимание к пользователям и окружающей среде.
+                </p>
+            </section>
+
+            <section [class]="openPage('org-committee')">
+                <h2 class="awards__navigations__tabcontent__headline text-bold">Оргкомитет</h2>
+                <section class="cards">
+                    <article *ngFor="let item of orgCommittee" class="cards__item">
+                        <div class="cards__item__image">
+                            <img src="{{item.img}}" alt="card-image">
+                        </div>
+                        <div class="cards__item__info">
+                            <h3>{{item.name}}</h3>
+                            <h5>{{item.description}}</h5>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <section [class]="openPage('organizers')">
+                <h2 class="awards__navigations__tabcontent__headline text-bold">Организаторы</h2>
+                <section class="organizers">
+                    <img src="../../../assets/images/organizers/logo-hisense.png" alt="logo-hisense">
+                    <img src="../../../assets/images/organizers/logo-yuksalish.svg" alt="logo-yuksalish">
+                    <img src="../../../assets/images/organizers/logo-shaharsozlik-to'lqini.jpg" alt="logo-shaharsozlik-to'lqini">
+                </section>
+            </section>
+        </div>
+
+    </div>
 
 </section>

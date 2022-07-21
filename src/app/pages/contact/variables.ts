@@ -1,5 +1,3 @@
-import { NONE_TYPE } from "@angular/compiler";
-
 export const contactCardItems = [
     {
         headline: 'Штаб-квартира',

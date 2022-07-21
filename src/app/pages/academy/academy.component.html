@@ -1,1 +1,31 @@
-<p>academy works!</p>
+<section class="academy container">
+
+    <div class="academy__title mb-1 text-center">
+        <h2 class="page-title mt-2 text-bold">Hisense HVAC Академия</h2>
+        <p class="mt-1">Дополнительная информация появится в ближайшее время. Пожалуйста, следите за обновлениями, чтобы быть в числе первых.</p>
+    </div>
+
+    <article class="academy__cards mt-3">
+
+        <div *ngFor="let item of courses;let i = index;" class="academy__cards__item">
+            <div class="academy__cards__item__image">
+                <img src="../../../assets/images/svg/image-academy-card.svg">
+            </div>
+            <div class="academy__cards__item__info">
+                <h5>Курс {{i+1}}</h5>
+                <a><button disabled="true"><span>Подробнее ></span></button></a>
+            </div>
+        </div>
+
+    </article>
+
+    <!-- <div class="academy__learn-more text-center">
+        <a href="#" target="_blank">
+            <button>
+                <span>Узнать больше ></span>
+            </button>
+        </a>
+    </div> -->
+    
+    
+</section>

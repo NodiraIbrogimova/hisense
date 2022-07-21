@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cardDetails } from './variables';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  cardDetails = cardDetails;
+  
   constructor() { }
 
   ngOnInit(): void {

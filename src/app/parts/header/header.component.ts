@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,26 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   navItems = [
-    {name: 'Главная', link: 'home'},
-    {name: 'О Нас ', link: 'about'},
-    {name: 'Hisense HVAC Академия', link: 'academy'},
-    {name: 'Hisense Награды', link: 'awards'},
-    {name: 'Новости', link: 'news'},
-    {name: 'Контакты', link: 'contact'}
+    { name: 'Главная', link: 'home' },
+    { name: 'О Нас ', link: 'about' },
+    { name: 'Товары', link: 'products' },
+    { name: 'Hisense HVAC Академия', link: 'academy' },
+    { name: 'Hisense Награды', link: 'awards' },
+    { name: 'Новости', link: 'news' },
+    { name: 'Контакты', link: 'contact' }
   ]
 
-  navbar = document.getElementById("nav");
-  // sticky = this.navbar.offsetTop;
+  mobileMenuIsOpen: boolean = false;
 
-  constructor() {
-  }
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  stickyTop(event: any) {
-    console.log('events', event)
-  }
-
-  toggleMenu() {
+  toggleMobileMenu(): any {
+    this.mobileMenuIsOpen = !this.mobileMenuIsOpen;
   }
 }

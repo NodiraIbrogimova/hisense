@@ -1,0 +1,38 @@
+.newsItem-detail {
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    &__header {
+        position: relative;
+
+        &__arrow-back {
+            position: absolute;
+            top: 5%;
+            // left: 5%;
+            font-size: 3rem;
+            z-index: 1;
+            color: #009EA1;
+    
+            cursor: pointer;
+    
+            &:hover {
+                font-size: 3.2rem;
+                transition: 0.3s;
+                font-weight: 600;
+            }
+        }
+
+        &__info {
+            width: 100%;
+            height: 100%;
+            padding: 5% 5%;
+
+            img {
+                max-height: 400px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -11,6 +11,11 @@ import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './parts/header/header.component';
 import { FooterComponent } from './parts/footer/footer.component';
+import { ImageTextBarcardComponent } from './parts/image-text-barcard/image-text-barcard.component';
+import { ImageTextHorlCardComponent } from './parts/image-text-horl-card/image-text-horl-card.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { FooterComponent } from './parts/footer/footer.component';
     NewsComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ImageTextBarcardComponent,
+    ImageTextHorlCardComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,

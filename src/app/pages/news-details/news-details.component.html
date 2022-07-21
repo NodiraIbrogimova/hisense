@@ -1,0 +1,15 @@
+<section class="newsItem-detail container mb-3">
+    <article class="newsItem-detail__header">
+        <span (click)="goBack()" class="newsItem-detail__header__arrow-back">&#8676;</span>
+        <div class="newsItem-detail__header__info text-center">
+            <h2 class="text-center mb-3">{{newsItem?.title}}</h2>
+            <img [src]="newsItem?.img" alt="newsItem?.title + img">
+        </div>
+    </article>
+
+    <div class="newsItem-detail__main">
+        <p class="text">{{newsItem?.text}}</p>
+        <br>
+        <br>
+    </div>
+</section>

@@ -1,0 +1,239 @@
+<section class="product-detail container mt-3 mb-3">
+
+    <article class="product-detail__header">
+        <div class="product-detail__header__transparent-bg"></div>
+        <span (click)="goBack()" class="product-detail__header__arrow-back">&#8676;</span>
+
+        <div class="product-detail__header__info text-center">
+            <h2>{{product?.title}}</h2>
+            <img [src]="product?.img" alt="product?.title + img">
+        </div>
+    </article>
+
+    <section class="product-detail__main" [class]="{active: currProduct === 1}">
+
+        <article class="product-detail__main__product-benefits">
+            <h2 class="main-color">Преимущества продукта</h2>
+            <p class="text mb-3">
+                Тепловые насосы воздух-вода Hisense поглощают свободную энергию из внешней атмосферы, что позволяет
+                потреблять меньше электроэнергии для выработки большего количества тепловой энергии. Серия Hi-AquaSmart
+                отличается лучшей производительностью, высокой эффективностью, высокой энергоэффективностью и
+                сокращением выбросов CO2. Модели этой серии можно легко установить в новом здании или уже в
+                существующем. Высокоэффективные тепловые насосы воздух-вода Hisense, очевидно, могут снизить
+                энергопотребление здания. Кроме того, система может работать с традиционным источником нагрева, таким
+                как масляный или газовый котел.
+            </p>
+
+            <img class="image-centered" src="../../../assets/images/svg/image-product-1-product-benefits.svg"
+                alt="Серия Hi-AquaSmart image-1">
+        </article>
+
+        <article class="product-detail__main__injection-tech">
+            <h3 class="main-color">Технология усовершенствованного впрыска пара</h3>
+            <p class="text mb-3">Hisense использует спиральный компрессор с впрыском пара, который обеспечивает более
+                высокую степень
+                сжатия, более плавную подачу масла и более низкий уровень шума.</p>
+
+            <div class="product-detail__main__injection-tech__image">
+                <div class="product-detail__main__injection-tech__image__left mb-3">
+                    <img src="../../../assets/images/svg/image-product-1-injection-tech-1.svg"
+                        alt="image-injection-tech-1">
+                    <ul>
+                        <li>Evaporator (outdoor units) – Испаритель (наружные блоки)</li>
+                        <li>Solenoid valve – Электромагнитный клапан</li>
+                        <li> First throttling – Первое дросселирование</li>
+                        <li> Second throttling – Второе дросселирование</li>
+                        <li> Accumulator, flash evaporator – Аккумулятор, испарителя мгновенного вскипания</li>
+                        <li> Vapor injection –Впрыск пара</li>
+                        <li> Scroll compressor – Спиральный компрессор</li>
+                        <li> Condensor (indoor units) – Конденсор (внутренний блок)</li>
+                    </ul>
+                </div>
+                <div class="product-detail__main__injection-tech__image__right">
+                    <img src="../../../assets/images/svg/image-product-1-injection-tech-2.svg"
+                        alt="image-injection-tech-2">
+                    <ul>
+                        <li>First throttling – Первое дросселирование</li>
+                        <li>Second throttling – Второе дросселирование</li>
+                        <li>Condensation – Конденсация</li>
+                        <li>Vapor injection –Впрыск пара</li>
+                        <li>Compression – Сжатие</li>
+                        <li>Injection point – Точка впрыска</li>
+                        <li>Flash evaporation point – Точка кипения испарителя</li>
+                        <li>Evaporation – Испарение</li>
+                        <li>Increasing the suction of compressor and enhancing the heating capacity – Увеличение
+                            всасывания компрессора и повышение теплопроизводительности</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text">
+                Система впрыска пара и инверторная технология с плавной регулировкой значительно улучшают систему
+                циркуляции хладагента. Это эффективно увеличивает поток хладагента за счет впрыска пара, тем самым
+                существенно повышая теплопроизводительность.
+            </p>
+        </article>
+
+        <article class="product-detail__main__emission-reduction">
+            <h3 class="main-color">Сокращение выбросов CO2</h3>
+            <p class="text mb-1">Использование теплового насоса может значительно сократить выбросы CO2.</p>
+            <p class="text mb-1">Сокращение выбросов CO2 <br> Поскольку тепловые насосы берут свободную энергию из
+                воздуха, они производят намного меньше CO2.</p>
+            <p class="text main-color mb-3">На 66% меньше, чем электрическое отопление <br>
+                На 50% меньше, чем масляное отопление<br>
+                На 30% меньше, чем газовое отопление</p>
+
+            <div class="image-with-caption">
+                <img src="../../../assets/images/svg/image-product-1-emission-induction.svg"
+                    alt="product-1-emission-induction">
+                <ul>
+                    <li>CO2 emissions – Выбросы CO2</li>
+                    <li>kgs of CO2 per kWHr heat produced – кг CO2 на киловатт-час произведенного тепла</li>
+                    <li>Electric heating – Электрическое отопление</li>
+                    <li>Oil boiler – Масляный котел</li>
+                    <li>Gas boiler – Газовый котел</li>
+                    <li>Heat pumps – Тепловые насосы</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="product-detail__main__economy">
+            <h3 class="main-color">Экономичность</h3>
+            <p class="text mb-3">По сравнению с другими системами обогрева, работающими на электричестве, газе,
+                угле/масле, солнечной энергии и т. д., тепловые насосы более эффективны, а ежегодное снижение затрат
+                очевидно.</p>
+            <div class="image-with-caption">
+                <img src="../../../assets/images/svg/image-product-1-economy.svg" alt="product-1-economy">
+                <ul>
+                    <li>Average annual running cost – Средняя годовая эксплуатационная стоимость</li>
+                    <li>Direct electric heating – Прямое электрическое отопление</li>
+                    <li>Fuel boiler – Масляный котел</li>
+                    <li>Gas condensing boiler – Газовый конденсационный котел</li>
+                    <li>Hi-AquaSmart</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="product-detail__main__water-pump">
+            <h3 class="main-color">Высокоэффективный водяной насос (DC)</h3>
+            <p class="text mb-3">
+                Серия Hi-AquaSmart оснащена высокоэффективным водяным насосом с двигателем постоянного тока
+                (инверторным), который позволяет минимизировать потребление энергии во время работы. Он имеет лучшую
+                линейную управляемость выходной мощностью и более широкую адаптивность для многих областей применения по
+                сравнению с водяным насосом с двигателем переменного тока.
+            </p>
+            <div class="image-with-caption">
+                <img src="../../../assets/images/svg/image-product-1-water-pump.svg" alt="image-product-1-water-pump">
+            </div>
+        </article>
+
+        <article class="product-detail__main__high-heat-output">
+            <h3 class="main-color">Высокая теплопроизводительность при низких температурах окружающей среды
+            </h3>
+            <p class="text mb-3">
+                Наружный блок Hi-AquaSmart мощностью 14 кВт может поддерживать номинальную мощность даже при -15 °C без
+                дополнительного электрического нагревателя, а наружный блок мощностью 16 кВт может поддерживать
+                номинальную мощность даже при -10 °C без дополнительного электрического нагревателя. Таким образом,
+                проектировщику не нужно повышать мощность теплового насоса даже при температуре наружного воздуха до -15
+                °C. </p>
+            <div class="image-with-caption">
+                <img src="../../../assets/images/svg/image-product-1-high-heat-output.svg"
+                    alt="image-product-1-high-heat-output">
+            </div>
+        </article>
+
+        <article class="product-detail__main__assembly-heat-sources">
+            <h3 class="main-color">Сборка различных источников тепла</h3>
+            <p class="text mb-3">Hi-AquaSmart можно комбинировать с котлом или солнечной батареей, поэтому, несомненно,
+                Hi-AquaSmart станет лучшей альтернативой традиционной котельной в старом здании, а также в качестве
+                резервного решения для нагрева воды для существующего котла. Если один источник тепла по какой-то
+                причине не работает, эта система гарантирует, что система обогрева продолжит работать.</p>
+            <img class="image-centered" src="../../../assets/images/svg/image-product-1-assembly-heat-sources.svg"
+                alt="image-product-1-assembly-heat-sources">
+            <p class="text text-bold mb-2 mt-3">Операционная система</p>
+            <ul class="text mb-3">
+                <li>Подогрев пола</li>
+                <li>Низкотемпературные радиаторы</li>
+                <li>Бытовая горячая вода</li>
+                <li>Комбинация Hi-AquaSmart + солнечная батарея / котел (дополнительно)</li>
+            </ul>
+
+            <div class="image-with-caption">
+                <img src="../../../assets/images/svg/image-product-1-assembly-heat-sources-table.svg"
+                    alt="product-1-assembly-heat-sources-table">
+                <ul>
+                    <li>Temperature sensor – Датчик температуры</li>
+                    <li>Security thermostat – Защитный термостат</li>
+                    <li>Regulator – Регулятор</li>
+                    <li>Electric heater – Электрический нагреватель</li>
+                    <li>Water pump – Водяной насос</li>
+                    <li>Check valve – Обратный клапан</li>
+                    <li>Motorized 2 ways valve – Моторизованный 2-х ходовой клапан</li>
+                    <li>Motorized 2 ways valve – Моторизованный 3-х ходовой клапан</li>
+                    <li>Decantation tank – Декантатор</li>
+                    <li>Expansion tank – Расширительный бак</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="product-detail__main__coefficient">
+            <h2 class="main-color">Коэффициент СОР до 4,84</h2>
+            <img class="image-centered mb-3" src="../../../assets/images/svg/image-product-1-coefficent-1.svg"
+                alt="image-product-1-coefficent-1">
+            <img class="image-centered" src="../../../assets/images/svg/image-product-1-coefficent-2.svg"
+                alt="image-product-1-coefficent-2">
+        </article>
+
+
+    </section>
+
+    <section class="product-detail__main" [class]="{active: currProduct === 2}">
+        <h2 class="main-color mt-3 mb-3">Преимущества продукта</h2>
+        <h3 class="main-color">Экологически чистый хладагент R32</h3>
+        <p class="text mb-1">
+            Нулевой потенциал разрушения озонового слоя (ODP) <br>
+            Более низкий потенциал глобального потепления (GWP)
+            <br>
+            Меньший объем заряда при той же емкости
+            <br>
+            Однокомпонентный хладагент, простой в обращении и переработке
+        </p>
+
+        <img src="../../../assets/images/svg/image-product-2-ecofriendly.svg" alt="image-product-2-ecofriendly"
+            class="image-centered mt-3 mb-3">
+        <ul class="mb-3">
+            <li>Global Warming Potential (GWP) – Потенциал глобального потепления</li>
+            <li>Change ratio – Коэффициент изменения</li>
+            <li>Effective tCO2eq. – Эффективный эквивалент CO2</li>
+        </ul>
+
+        <h3 class="main-color">Энергоэффективность A+++ и Сертификация KEYMARK</h3>
+        <h3 class="main-color mb-3">Интеллектуальное управление через приложение</h3>
+        <br>
+        <br>
+    </section>
+
+    <section class="product-detail__main" [class]="{active: currProduct === 3}">
+        <h2 class="main-color mt-3 mb-3">Преимущества продукта</h2>
+        <h3 class="main-color">Экологически чистый хладагент R32</h3>
+        <p class="text mb-1">
+            Нулевой потенциал разрушения озонового слоя (ODP) <br>
+            Более низкий потенциал глобального потепления (GWP)
+            <br>
+            Меньший объем заряда при той же емкости
+            <br>
+            Однокомпонентный хладагент, простой в обращении и переработке
+        </p>
+
+        <h3 class="main-color">Энергоэффективность A+++</h3>
+
+        <h2 class="main-color">Интеллектуальный демонстрационный центр</h2>
+        <p class="text">Система централизованного кондиционирования воздуха Hisense способствует защите окружающей среды и уделяет особое внимание экологическому развитию. Компания стремится создать более здоровую экологическую среду для людей. Таким образом, Интеллектуальный выставочный зал Hisense делает экологию элементом дизайна с темой “Жить интеллектуальной экологической жизнью, наслаждаясь грядущими днями”. Как выставочная зона, так и экологическая концепция проходят через весь выставочный зал, объединяются с системой онлайн-гидов для создания развернутой выставки из четырех элементов, включая бренд, технологии, экологию и обслуживание, а затем демонстрируют всестороннюю силу и качество мастерства Hisense во всех отношениях.</p>
+        <br>
+        <h3 class="main-color">Выставочный зал VRF-систем Hisense</h3>
+        <h3 class="main-color">Программа подбора</h3>
+        <p class="text">Программа подбора Hisense - это программа на базе Windows, которая может работать на Windows XP и других ОС более высокого уровня. Программа поддерживает несколько языков и удобна для пользователей из разных стран. Пользователи могут легко получать самую новую информацию о продукции, поскольку программа подбора Hisense поддерживает обновление базы данных продукции. Кроме того, эта программа очень интеллектуальна. Она не только поддерживает рисование вручную, но также может автоматически сгенерировать схему трубопроводов устройства, схему подключения и подробный отчет по проекту. Программа также поддерживает вставку строительных чертежей в форматах DWG, PDF, JPG и PNG, а также позволяет выполнить проектирование на основе строительного чертежа.</p>
+        <br>
+        <br>
+    </section>
+
+</section>

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./academy.component.scss']
 })
 export class AcademyComponent implements OnInit {
+  disabled: Boolean = true;
+  courses = Array(3);
 
   constructor() { }
 

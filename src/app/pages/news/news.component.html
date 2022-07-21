@@ -1,22 +1,16 @@
-<section class="container news">
-    <h2 class="news__title">Новости</h2>
+<section class="news container">
+    <h2 class="page-title mt-2 mb-3 text-bold">Новости</h2>
 
-    <a *ngFor="let item of newsItems" href="#">
-        <article class="news__card row">
-            <div class="news__card__img">
-                <img src="../../../assets/images/jpg/image-news.jpg" alt="" />
+    <article class="news__cards">
+        <a routerLink="/news/{{item.id}}" *ngFor="let item of news" class="news__cards__item">
+            <div class="news__cards__item__image">
+                <div class="news__cards__item__image__rect"></div>
+                <img [src]="'../../../assets/images/svg/image-news-' + item.id + '.svg'">
             </div>
-            <div class="news__card__text">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum ....
-                </p>
+            <div class="news__cards__item__info">
+                <h5>{{item.title}} </h5>
+                <a routerLink="/news/{{item.id}}"><button><span>Подробнее ></span></button></a>
             </div>
-        </article>
-    </a>
+        </a>
+    </article>
 </section>
