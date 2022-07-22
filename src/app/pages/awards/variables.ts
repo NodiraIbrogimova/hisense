@@ -14,7 +14,7 @@ export const judges = [
             },
             {
                 name: "Зафар Ташмухамедов",
-                description: "главный архитектор «Murad Buildings Studio",
+                description: "Главный архитектор «Murad Buildings Studio",
                 img: "../../../assets/images/architecture/zafar-tashmuxamedov.webp"
             },
             {
@@ -84,7 +84,7 @@ export const judges = [
             },
             {
                 name: "Хуршид Абдукамилов",
-                description: 'инженер-конструктор "FUTURO ARCHITETTURA"',
+                description: 'Инженер-конструктор "FUTURO ARCHITETTURA"',
                 img: '../../../assets/images/construction/xurshid-abdukamilov.webp'
             },
             {
@@ -94,7 +94,7 @@ export const judges = [
             },
             {
                 name: "Мансур Закиров",
-                description: 'инженер-конструктор “O’zshaharsozlik LITI”',
+                description: 'Инженер-конструктор “O’zshaharsozlik LITI”',
                 img: '../../../assets/images/construction/mansur-zakirov.webp'
             },
             {
@@ -155,7 +155,7 @@ export const orgCommittee = [
     },
     {
         name: 'Джахонгир Тураханов',
-        description: 'заместитель председателя Общенационального движения "Юксалиш"',
+        description: 'Заместитель председателя Общенационального движения "Юксалиш"',
         img: '../../../assets/images/org-committee/jahongir-turaxanov.webp'
     },
     {
