@@ -117,9 +117,7 @@
             <section [class]="openPage('judges-and-criterias')">
                 <h2 class="awards__navigations__tabcontent__headline text-bold">Жюри и Критерии отбора</h2>
                 <ng-container *ngFor = "let judge of judges">
-                    <p class="text text-bold mt-3 mb-1">{{judge.category}}</p>
-                    <p class="text mb-1">Бобир Клычев – Председатель жюри, Основатель бюро “ARC”</p>
-                    <p class="text mb-3">Зафар Ташмухамедов – Главный архитектор“Murad Buildings Studio”</p>
+                    <p class="text--headline text text-bold mt-3 mb-1">{{judge.category}}</p>
                     <section class="cards mb-3">
                         <article *ngFor="let item of judge.cards" class="cards__item">
                             <div class="cards__item__image">

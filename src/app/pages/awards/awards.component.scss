@@ -308,8 +308,12 @@
                     font-size: 2rem;
                 }
 
-                p {
+                .text {
                     font-size: 1rem;
+
+                    &--headline {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 .cards {

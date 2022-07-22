@@ -2,7 +2,7 @@
     <h2 class="page-title mt-2 mb-3 text-bold">Товары</h2>
 
     <article class="products__cards">
-        <a routerLink="/products/{{product.id}}" *ngFor="let product of products" class="products__cards__item">
+        <a *ngFor="let product of products" class="products__cards__item">
             <div class="products__cards__item__image">
                 <div class="products__cards__item__image__rect"></div>
                 <img [src]="'../../../assets/images/svg/image-product-' + product.id + '.webp'">

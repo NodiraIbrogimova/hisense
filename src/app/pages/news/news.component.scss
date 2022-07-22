@@ -10,28 +10,21 @@
     }
 
     &__cards {
-
         display: flex;
         flex-wrap: wrap;
         gap: 5%;
-
         margin-bottom: 5rem;
 
         &__item {
-
             display: flex;
             flex-direction: column;
-            
             align-items: center;
-            // flex: 1 28%;
-            
-            box-shadow: 0 10px 15px 0 rgb(152, 136, 136, 0.2);
+            flex: 1 30%;
+            box-shadow: 0 10px 15px 0 rgb(152 136 136 / 20%);
             transition: 0.3s;
-
-            cursor: pointer;
-
             width: auto;
-            max-width: 30%;
+            min-height: 50%;
+            max-height: 50%;
             margin-bottom: 2rem;
             
             &:hover {
@@ -42,7 +35,6 @@
                 width: 100%;
                 height: 100%;
                 max-height: 30rem;
-                position: relative;
 
                 &__rect {
                     position: absolute;
@@ -51,7 +43,6 @@
                     height: 100%;
                     top: 0;
                     left: 0;
-                    // background-color: #F9F9F9;
                 }
 
                 img {
@@ -70,6 +61,10 @@
                     margin-bottom: 2rem;
                     margin-top: 2rem;
                     font-size: 2rem;
+                }
+
+                a {
+                    cursor: pointer;
                 }
 
                 button {
@@ -95,26 +90,3 @@
         font-size: 2rem;
     }
 }
-// .news {
-
-//     a {
-//         color: unset;
-//     }
-
-//     &__title {
-//         font-size: 2.5rem;
-//         font-weight: 700;
-//         color: #009EA1;
-
-//         margin-top: 3rem;
-//         margin-bottom: 3rem;
-//     }
-
-//     &__cards {
-//         &__item:after {
-//             content: "";
-//             display: table;
-//             clear: both;
-//         }
-//     }
-// }
