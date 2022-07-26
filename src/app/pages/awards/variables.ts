@@ -159,8 +159,8 @@ export const orgCommittee = [
         img: '../../../assets/images/org-committee/jahongir-turaxanov.webp'
     },
     {
-        name: 'Эльвина Мустафина',
-        description: 'Журналист, специалист ОНД «Юксалиш»',
+        name: 'Мустафина Эльвина',
+        description: 'Руководитель пресс-службы - советник председателя',
         img: '../../../assets/images/org-committee/elvina-mustafina.webp'
     },
 ]
