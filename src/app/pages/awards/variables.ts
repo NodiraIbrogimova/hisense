@@ -144,23 +144,23 @@ export const orgCommittee = [
         img: '../../../assets/images/org-committee/saida-jabbarova.webp'
     },
     {
-        name: 'Max Yang',
-        description: 'Сервис-Менеджер представительства Hisense HVAC по Центральной Азии',
-        img: '../../../assets/images/engineering/max-yang.webp'
-    },
-    {
-        name: 'Отабек Мурадов',
-        description: 'Архитектор, градостроитель, эксперт ЮНИСЕФ',
-        img: '../../../assets/images/org-committee/otabek-muradov.webp'
-    },
-    {
         name: 'Джахонгир Тураханов',
         description: 'Заместитель председателя Общенационального движения "Юксалиш"',
         img: '../../../assets/images/org-committee/jahongir-turaxanov.webp'
+    },
+    {
+        name: 'Max Yang',
+        description: 'Сервис-Менеджер представительства Hisense HVAC по Центральной Азии',
+        img: '../../../assets/images/engineering/max-yang.webp'
     },
     {
         name: 'Мустафина Эльвина',
         description: 'Руководитель пресс-службы - советник председателя',
         img: '../../../assets/images/org-committee/elvina-mustafina.webp'
     },
+    {
+        name: 'Отабек Мурадов',
+        description: 'Архитектор, градостроитель, эксперт ЮНИСЕФ',
+        img: '../../../assets/images/org-committee/otabek-muradov.webp'
+    }
 ]

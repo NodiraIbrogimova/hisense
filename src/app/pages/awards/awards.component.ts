@@ -9,9 +9,9 @@ import { judges, orgCommittee } from './variables';
 })
 export class AwardsComponent implements OnInit {
   navItems = [
-    {id: 1, name: 'О Премии', tabLink: 'about-awards'},
-    {id: 2, name: 'Призы и Сроки', tabLink: 'awards-and-deadlines'},
-    {id: 3, name: 'Жюри и Критерии отбора', tabLink: 'judges-and-criterias'},
+    {id: 1, name: 'О премии', tabLink: 'about-awards'},
+    {id: 2, name: 'Призы и сроки', tabLink: 'awards-and-deadlines'},
+    {id: 3, name: 'Жюри и критерии отбора', tabLink: 'judges-and-criterias'},
     {id: 4, name: 'Организаторы', tabLink: 'organizers'},
     {id: 5, name: 'Оргкомитет', tabLink: 'org-committee'}
   ];
