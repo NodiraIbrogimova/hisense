@@ -6,8 +6,27 @@
 
     <div class="awards__apply-section">
         <div class="awards__apply-section__text">
-            <h2>Осталось один день до участия в Shaharsoz Award 2022</h2>
-            <a href="https://bit.ly/3RLVjJg" target="_blank"><button><span>Подать Заявку ></span></button></a>
+
+            <div class="clockdiv mb-3">
+                <div>
+                  <span class="days">{{days}}</span>
+                  <div class="smalltext">Days</div>
+                </div>
+                <div>
+                  <span class="hours">{{hours}}</span>
+                  <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                  <span class="minutes">{{minutes}}</span>
+                  <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                  <span class="seconds">{{seconds}}</span>
+                  <div class="smalltext">Seconds</div>
+                </div>
+            </div>
+              
+            <a [class.disabled]="applicationIsClosed" href="https://bit.ly/3RLVjJg" target="_blank"><button><span>Подать Заявку ></span></button></a>
         </div>
     </div>
 
@@ -119,16 +138,19 @@
                     предназначения на территории Узбекистана.
                 </p>
                 <br>
-                <p>
-                    Подавать заявку могут лишь выпускники бакалавриата. Предоставленный проект должен иметь статус
-                    дипломного проекта, следовательно победители конкурса должны будут предоставить документ
-                    подтверждающий статус проекта.
+                <p class="text">
+                    Подать заявку могут лишь выпускники бакалавриата 2020-2022 гг.
+                    Предоставленный проект должен иметь статус дипломного проекта, следовательно победителям конкурса
+                    необходимо предоставить документ подтверждающий статус проекта.
+                    В случае отсутствия документа, результат будет аннулирован и победитель будет переизбран.
                     <br>
                     По итогам отбора будут определены 4 победителя: один победитель в каждой номинации. В случае
-                    недобора по какой-либо номинации, Жюри рассмотрит возможность определения дополнительных победителей
+                    недобора в какой-либо номинации, Жюри рассмотрит возможность определения дополнительных победителей
                     в других номинациях.
+
                     <br>
-                    Скачать положение Премии можно по <a
+                    Скачать положение Премии можно по
+                    <a class="text"
                         href="https://drive.google.com/drive/folders/1q-rpt79xm8TZAkKG2Cpjo1MzIBt6c5WH?usp=sharing"
                         target="_blank">ссылке</a>
                     <br>

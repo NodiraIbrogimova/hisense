@@ -1,8 +1,47 @@
 .awards {
     scrollbar-gutter: unset;
 
+    .clockdiv {
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .clockdiv>div {
+        padding: 10px;
+        color: #009EA1;
+        border-radius: 3px;
+        background: rgba(225, 225, 225, .42);
+        display: inline-block;
+        font-weight: 500;
+    }
+
+    .clockdiv div>span {
+        padding: 15px;
+        color: #fff;
+        border-radius: 3px;
+        background: #009EA1;
+        display: inline-block;
+    }
+
+    .clockdiv .smalltext {
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+
     .visible {
         display: block;
+    }
+
+    .disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        button {
+            background-color: gray;
+        }
     }
 
     .hidden {
@@ -45,9 +84,8 @@
 
         &__text {
             position: absolute;
-            position: absolute;
             top: 50%;
-            left: 40%;
+            left: 20%;
             transform: translate(-50%, -50%);
 
             h2 {
@@ -57,7 +95,9 @@
             }
 
             a {
+                display: table;
                 button {
+                    display: table-row;
                     padding: 1rem 2rem;
                     background-color: #009EA1;
                     border: none;
@@ -165,14 +205,14 @@
                 color: #009EA1;
                 margin-block-end: 3rem;
             }
-            
-            .org-committee, .organizers {
+
+            .org-committee,
+            .organizers {
                 display: flex;
                 flex-wrap: wrap;
 
                 justify-content: space-between;
                 margin-block-start: 5%;
-
             }
 
             .organizers img {
@@ -202,6 +242,7 @@
                         min-height: 22rem;
                         max-height: 22rem;
                         width: auto;
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -290,17 +331,19 @@
         }
 
         &__navigations {
+
             flex-wrap: wrap;
 
             &__tab {
                 width: 100%;
             }
+
             .nav {
                 &-link {
                     font-size: 1rem;
                 }
             }
-            
+
             &__tabcontent {
                 width: 100%;
 
