@@ -8,8 +8,9 @@ import { judges, orgCommittee } from './variables';
   styleUrls: ['./awards.component.scss']
 })
 export class AwardsComponent implements OnInit {
-  deadline = new Date('September 17 2022 23:59:59 GMT+0500');
-  // deadline = new Date('August 6 2022 1:28:59 GMT+0500');
+  to = new Date('September 17 2022 23:59:59 GMT+0500');
+  // from = new Date('August 9 2022 11:00:00 GMT+0500');
+  from = new Date('August 9 2022 11:00:00 GMT+0500');
 
   applicationIsClosed: boolean = false;
   seconds: any = 0;
@@ -34,7 +35,7 @@ export class AwardsComponent implements OnInit {
   }
 
   calculateClockInterval = setInterval(() => {
-      this.getTimeRemaining(this.deadline);
+      this.getTimeRemaining();
   }, 1000);
   
 
@@ -47,9 +48,8 @@ export class AwardsComponent implements OnInit {
     return pageName === this.activeLink ? 'visible' : 'hidden';
   }
 
-  getTimeRemaining(endtime: Date){
-      const today = new Date().getTime();
-      const total = endtime.getTime() - today;
+  getTimeRemaining(){
+      const total = this.to.getTime() - this.from.getTime();
       this.seconds = Math.floor( (total/1000) % 60 );
       this.minutes = Math.floor( (total/1000/60) % 60 );
       this.hours = Math.floor( (total/(1000*60*60)) % 24 );
@@ -68,7 +68,6 @@ export class AwardsComponent implements OnInit {
       this.minutes = ('0' + this.minutes).slice(-2);
       this.hours = ('0' + this.hours).slice(-2);
       this.days = ('0' + this.days).slice(-2);
-      console.log(`time is: ${total}`);
   }
 
 }

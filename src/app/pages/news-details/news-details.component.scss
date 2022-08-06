@@ -14,9 +14,9 @@
             font-size: 3rem;
             z-index: 1;
             color: #009EA1;
-    
+
             cursor: pointer;
-    
+
             &:hover {
                 font-size: 3.2rem;
                 transition: 0.3s;
@@ -36,4 +36,19 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 540px) {
+    .newsItem-detail {
+        h2 {
+            font-size: 2rem;
+            margin-top: 4rem;
+        }
+
+        .text {
+            font-size: 1rem;
+        }
+    }
+
+
 }

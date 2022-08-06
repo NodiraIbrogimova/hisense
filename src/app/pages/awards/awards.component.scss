@@ -4,24 +4,27 @@
     .clockdiv {
         display: inline-block;
         font-weight: 100;
-        text-align: center;
         font-size: 30px;
     }
 
-    .clockdiv>div {
+    .clockdiv > div {
         padding: 10px;
         color: #009EA1;
         border-radius: 3px;
-        background: rgba(225, 225, 225, .42);
+        background: rgba(225, 225, 225, .65);
         display: inline-block;
         font-weight: 500;
     }
 
-    .clockdiv div>span {
+    .clockdiv > div > div {
+        text-align: center;
+    }
+
+    .clockdiv div > span {
         padding: 15px;
-        color: #fff;
+        color: #009EA1;
         border-radius: 3px;
-        background: #009EA1;
+        background: #fff;
         display: inline-block;
     }
 
@@ -284,6 +287,25 @@
 //tablet menu 
 @media screen and (max-width: 800px) {
     .awards {
+
+        &__apply-section {
+            background-position: 80% center;
+            &__text {
+                height: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                left: 50%;
+                padding: 1rem 2rem;
+                width: 100%;
+
+                .clockdiv {
+                    margin-top: auto;
+                }
+
+            }
+        }
+
         &__navigations {
 
             &__tabcontent {
@@ -316,7 +338,12 @@
         }
 
         &__apply-section {
+            background-position: 90% center;
             &__text {
+
+                .clockdiv > div {
+                    padding: 2px;
+                }
 
                 h2 {
                     font-size: 3rem;
