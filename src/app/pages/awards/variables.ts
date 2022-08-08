@@ -14,7 +14,7 @@ export const judges = [
             },
             {
                 name: "Зафар Ташмухамедов",
-                description: "Главный архитектор «Murad Buildings Studio",
+                description: "Главный архитектор «MB Studio",
                 img: "../../../assets/images/architecture/zafar-tashmuxamedov.webp"
             },
             {
@@ -155,7 +155,7 @@ export const orgCommittee = [
     },
     {
         name: 'Мустафина Эльвина',
-        description: 'Руководитель пресс-службы - советник председателя',
+        description: 'Руководитель пресс-службы - советник председателя ОНД "Юксалиш"',
         img: '../../../assets/images/org-committee/elvina-mustafina.webp'
     },
     {
