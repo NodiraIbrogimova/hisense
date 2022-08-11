@@ -8,66 +8,65 @@ import { judges, orgCommittee } from './variables';
   styleUrls: ['./awards.component.scss']
 })
 export class AwardsComponent implements OnInit {
-  to = new Date('September 17 2022 23:59:59 GMT+0500');
-  // from = new Date('August 9 2022 11:00:00 GMT+0500');
-  from = new Date('August 9 2022 11:00:00 GMT+0500');
-
+  until = new Date('Sep 17, 2022 23:59:59 GMT+0500').getTime();
   applicationIsClosed: boolean = false;
   seconds: any = 0;
   minutes: any = 0;
   hours: any = 0;
   days: any = 0;
   navItems = [
-    {id: 1, name: 'О премии', tabLink: 'about-awards'},
-    {id: 2, name: 'Призы и сроки', tabLink: 'awards-and-deadlines'},
-    {id: 3, name: 'Жюри и критерии отбора', tabLink: 'judges-and-criterias'},
-    {id: 4, name: 'Организаторы', tabLink: 'organizers'},
-    {id: 5, name: 'Оргкомитет', tabLink: 'org-committee'}
+    { id: 1, name: 'О премии', tabLink: 'about-awards' },
+    { id: 2, name: 'Призы и сроки', tabLink: 'awards-and-deadlines' },
+    { id: 3, name: 'Жюри и критерии отбора', tabLink: 'judges-and-criterias' },
+    { id: 4, name: 'Организаторы', tabLink: 'organizers' },
+    { id: 5, name: 'Оргкомитет', tabLink: 'org-committee' }
   ];
   activeLink = 'about-awards';
   judges = judges;
   orgCommittee = orgCommittee;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.calculateClockInterval;
   }
 
   calculateClockInterval = setInterval(() => {
-      this.getTimeRemaining();
+    this.getTimeRemaining();
   }, 1000);
-  
 
-  activatePage(pageName: string){
+
+  activatePage(pageName: string) {
     const id = pageName;
     this.activeLink = pageName;
   }
 
-  openPage(pageName: any){
+  openPage(pageName: any) {
     return pageName === this.activeLink ? 'visible' : 'hidden';
   }
 
-  getTimeRemaining(){
-      const total = this.to.getTime() - this.from.getTime();
-      this.seconds = Math.floor( (total/1000) % 60 );
-      this.minutes = Math.floor( (total/1000/60) % 60 );
-      this.hours = Math.floor( (total/(1000*60*60)) % 24 );
-      this.days = Math.floor( total/(1000*60*60*24) );
-    
-      if (total <= 0) {
-        clearInterval(this.calculateClockInterval);
-        this.applicationIsClosed = true;
-        this.days = '00';
-        this.hours = '00';
-        this.minutes = '00';
-        this.seconds = '00';
-      }
+  getTimeRemaining() {
+    const from = new Date().getTime();
+    const distance = this.until - from;
+    this.seconds = Math.floor((distance / 1000) % 60);
+    this.minutes = Math.floor((distance / 1000 / 60) % 60);
+    this.hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-      this.seconds = ('0' + this.seconds).slice(-2);
-      this.minutes = ('0' + this.minutes).slice(-2);
-      this.hours = ('0' + this.hours).slice(-2);
-      this.days = ('0' + this.days).slice(-2);
+    if (distance < 0) {
+      clearInterval(this.calculateClockInterval);
+      this.applicationIsClosed = true;
+      this.days = '00';
+      this.hours = '00';
+      this.minutes = '00';
+      this.seconds = '00';
+    }
+
+    this.seconds = ('0' + this.seconds).slice(-2);
+    this.minutes = ('0' + this.minutes).slice(-2);
+    this.hours = ('0' + this.hours).slice(-2);
+    this.days = ('0' + this.days).slice(-2);
+    console.log('days ', this.days);
   }
 
 }
