@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hisense';
+  title = 'HisenseHvac';
+
+  constructor(public translate: TranslateService) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    const item = localStorage.getItem('language')
+    let lang: any;
+    if (item){
+      lang = localStorage.getItem('language')
+    }
+    else {
+      lang = 'ru'
+    }
+    translate.setDefaultLang(lang);
+  }
 }
