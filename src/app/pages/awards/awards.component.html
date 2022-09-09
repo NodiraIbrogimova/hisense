@@ -1,9 +1,9 @@
 <section class="container awards">
 
     <div class="awards__language-selection">
-        <button (click)="translateLanguageTo('ru')"><span>RU</span></button>
+        <button [class]="{'active': ru == true, 'inactive': ru == false}" (click)="translateLanguageTo('ru')"><span>RU</span></button>
         <span class="awards__language-selection__delimiter">|</span>
-        <button (click)="translateLanguageTo('uz')"><span>UZ</span></button>
+        <button [class]="{'active': uz == true, 'inactive': uz == false}" (click)="translateLanguageTo('uz')"><span>UZ</span></button>
     </div>
 
     <div class="awards__logos">
@@ -33,13 +33,13 @@
                 </div>
             </div>
               
-            <a [class.disabled]="applicationIsClosed" href="{{'forms_link' | translate}}" target="_blank"><button><span>{{ 'apply_button' | translate }}</span></button></a>
+            <a [class.disabled]="applicationIsClosed" href="{{'forms_link' | translate}}" target="_blank">
+                <button><span>{{ 'apply_button' | translate }}</span></button>
+            </a>
         </div>
     </div>
 
     <div class="awards__navigations">
-
-        <!-- TODO: Add translation inside class with observable -->
         <nav class="awards__navigations__tab nav">
             <ul class="nav-list">
                 <li class="nav-item" *ngFor="let item of navItems" (click)="activatePage(item.tabLink)"

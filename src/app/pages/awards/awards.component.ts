@@ -26,6 +26,8 @@ export class AwardsComponent implements OnInit {
   judges = judges;
   orgCommittee = orgCommittee;
   language: any = '';
+  uz = false;
+  ru = true;
 
   constructor(public translate: TranslateService, @Inject(DOCUMENT) private document: Document) { 
     this.language = localStorage.getItem('language');
@@ -41,6 +43,15 @@ export class AwardsComponent implements OnInit {
   }
 
   translateLanguageTo(lang: string) {
+    if (lang == 'uz') {
+      this.uz = true;
+      this.ru = false;
+    }
+    else {
+      this.ru = true;
+      this.uz = false;
+    }
+
     this.translate.setDefaultLang(lang);
     this.language = lang;
     localStorage.setItem('language', lang);

@@ -56,9 +56,35 @@
         font-weight: 600;
     }
 
+    .inactive {
+        color: initial;
+    }
+
     .text--email {
         color: grey;
         font-size: 1.8rem;
+    }
+
+    &__language-selection {
+        display: flex;
+        margin-top: 4rem;
+
+        span {
+            margin: auto 1rem;
+        }
+
+        button {
+            background-color: transparent;
+            border: transparent;
+        }
+        
+        button:nth-child(1) {
+            // margin-right: 1rem;
+        }
+        button:nth-child(2) {
+            // margin-left: 1rem;
+        }
+        
     }
 
     &__logos {
