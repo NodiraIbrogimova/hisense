@@ -9,7 +9,7 @@ import { judges, orgCommittee } from './variables';
   styleUrls: ['./awards.component.scss']
 })
 export class AwardsComponent implements OnInit {
-  until = new Date('Sep 17, 2022 23:59:59 GMT+0500').getTime();
+  until = new Date('Sep 25, 2022 23:59:59 GMT+0500').getTime();
   applicationIsClosed: boolean = false;
   seconds: any = 0;
   minutes: any = 0;
