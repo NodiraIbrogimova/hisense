@@ -93,11 +93,6 @@ export const judges = [
                 img: '../../../assets/images/construction/salimjon-ilaxunov.webp'
             },
             {
-                name: "Мансур Закиров",
-                description: 'Инженер-конструктор “O’zshaharsozlik LITI”',
-                img: '../../../assets/images/construction/mansur-zakirov.webp'
-            },
-            {
                 name: "Хумоюн Эсонов",
                 description: 'Главный инженер проектной организации «"Forze Alp"»',
                 img: '../../../assets/images/construction/xumoyun-esonov.webp'
