@@ -8,11 +8,6 @@ export const judges = [
                 img: "../../../assets/images/architecture/bobur-klichev.webp"
             },
             {
-                name: "Улуғбек Холмуродов",
-                description: "Архитектор, дизайнер, основатель дизайн бюро «Holmuradov Design» и архитектурного направления бюро «Holmuradov Architects».",
-                img: "../../../assets/images/architecture/ulugbek-xolmuradov.webp"
-            },
-            {
                 name: "Зафар Ташмухамедов",
                 description: "Главный архитектор «MB Studio",
                 img: "../../../assets/images/architecture/zafar-tashmuxamedov.webp"
