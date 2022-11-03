@@ -25,7 +25,7 @@ export class AwardsComponent implements OnInit {
   activeLink = 'about-awards';
   judges = judges;
   orgCommittee = orgCommittee;
-  language: any = '';
+  language: any = 'ru';
   uz = false;
   ru = true;
 
