@@ -114,13 +114,20 @@
         &__text {
             position: absolute;
             top: 50%;
-            left: 20%;
+            left: 30%;
             transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             h2 {
                 font-size: 5.5rem;
                 color: #009EA1;
                 margin-block-end: 2rem;
+            }
+
+            span {
+                font-size: 2rem;
             }
 
             a {
@@ -310,6 +317,18 @@
     }
 }
 
+//laptop menu
+@media screen and (max-width: 1024px){
+    .awards {
+        &__apply-section {
+
+            &__text {
+                left: 40%;
+            }
+        }
+    }
+}
+
 //tablet menu 
 @media screen and (max-width: 800px) {
     .awards {
@@ -320,9 +339,9 @@
                 height: inherit;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end;
+                justify-content: center;
                 left: 50%;
-                padding: 1rem 2rem;
+                padding: 2rem 4rem;
                 width: 100%;
 
                 .clockdiv {
@@ -366,6 +385,7 @@
         &__apply-section {
             background-position: 90% center;
             &__text {
+                align-items: center;
 
                 .clockdiv > div {
                     padding: 2px;
@@ -373,6 +393,11 @@
 
                 h2 {
                     font-size: 3rem;
+                }
+
+                span {
+                    font-size: 1rem;
+                    text-align: center;
                 }
 
                 a {
